@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import Demo from "../views/Demo.vue";
+import Test from "../views/Test.vue";
 
 const routes = [
   {
@@ -16,6 +18,16 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
+  {
+    path: "/demo",
+    name: "Demo",
+    component: Demo
+  },
+  {
+    path: "/test",
+    name: "Test",
+    component: Test
+  },
 ];
 
 const router = createRouter({
@@ -24,3 +36,4 @@ const router = createRouter({
 });
 
 export default router;
+ 
